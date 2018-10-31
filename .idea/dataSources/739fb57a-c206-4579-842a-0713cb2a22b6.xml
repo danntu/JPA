@@ -966,87 +966,135 @@
     </collation>
     <table id="242" parent="6" name="employee"/>
     <table id="243" parent="6" name="employee_addresslist"/>
-    <table id="244" parent="6" name="sequence"/>
-    <table id="245" parent="6" name="student"/>
-    <column id="246" parent="242" name="E_ID">
+    <table id="244" parent="6" name="employeeset"/>
+    <table id="245" parent="6" name="employeeset_addresssets"/>
+    <table id="246" parent="6" name="sequence"/>
+    <table id="247" parent="6" name="student"/>
+    <column id="248" parent="242" name="E_ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="242" name="E_NAME">
+    <column id="249" parent="242" name="E_NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="248" parent="242" name="PRIMARY">
+    <key id="250" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>E_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="249" parent="243" name="E_CITY">
+    <column id="251" parent="243" name="E_CITY">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="243" name="E_PIN_CODE">
+    <column id="252" parent="243" name="E_PIN_CODE">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="243" name="E_STATE">
+    <column id="253" parent="243" name="E_STATE">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="243" name="Employee_E_ID">
+    <column id="254" parent="243" name="Employee_E_ID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="253" parent="243" name="FK_Employee_ADDRESSLIST_Employee_E_ID">
+    <index id="255" parent="243" name="FK_Employee_ADDRESSLIST_Employee_E_ID">
       <ColNames>Employee_E_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="254" parent="243" name="FK_Employee_ADDRESSLIST_Employee_E_ID">
+    <foreign-key id="256" parent="243" name="FK_Employee_ADDRESSLIST_Employee_E_ID">
       <ColNames>Employee_E_ID</ColNames>
       <RefSchemaName>studentdata</RefSchemaName>
       <RefTableName>employee</RefTableName>
       <RefColNames>E_ID</RefColNames>
     </foreign-key>
-    <column id="255" parent="244" name="SEQ_NAME">
+    <column id="257" parent="244" name="E_ID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="258" parent="244" name="E_NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="259" parent="244" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>E_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="260" parent="245" name="E_CITY">
+      <Position>1</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="261" parent="245" name="E_PIN_CODE">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="245" name="E_STATE">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="263" parent="245" name="EmployeeSet_E_ID">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="264" parent="245" name="FK_EmployeeSet_ADDRESSSETS_EmployeeSet_E_ID">
+      <ColNames>EmployeeSet_E_ID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="265" parent="245" name="FK_EmployeeSet_ADDRESSSETS_EmployeeSet_E_ID">
+      <ColNames>EmployeeSet_E_ID</ColNames>
+      <RefSchemaName>studentdata</RefSchemaName>
+      <RefTableName>employeeset</RefTableName>
+      <RefColNames>E_ID</RefColNames>
+    </foreign-key>
+    <column id="266" parent="246" name="SEQ_NAME">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="244" name="SEQ_COUNT">
+    <column id="267" parent="246" name="SEQ_COUNT">
       <Position>2</Position>
       <DataType>decimal(38)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="257" parent="244" name="PRIMARY">
+    <key id="268" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SEQ_NAME</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="258" parent="245" name="S_ID">
+    <column id="269" parent="247" name="S_ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="245" name="S_AGE">
+    <column id="270" parent="247" name="S_AGE">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="245" name="S_NAME">
+    <column id="271" parent="247" name="S_NAME">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="261" parent="245" name="PRIMARY">
+    <key id="272" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>S_ID</ColNames>
       <Primary>1</Primary>
