@@ -1,4 +1,7 @@
-package main.java;
+package main.java.mapping;
+
+import main.java.entity.Address;
+import main.java.entity.Employee;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

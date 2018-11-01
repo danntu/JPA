@@ -6,6 +6,9 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
+          <factory-entry name="Collection_Map" />
+          <factory-entry name="Collection_Set" />
+          <factory-entry name="Collection_Type" />
           <factory-entry name="NewPersistenceUnit" />
           <factory-entry name="StudentDetails" />
         </datasource-mapping>

@@ -3,7 +3,7 @@
 
     <persistence-unit name="StudentDetails">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>main.java.StudentEntity</class>
+        <class>main.java.entity.StudentEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/studentdata"/>
@@ -16,8 +16,8 @@
 
     <persistence-unit name="Collection_Type">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>main.java.Employee</class>
-        <class>main.java.Address</class>
+        <class>main.java.entity.Employee</class>
+        <class>main.java.entity.Address</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/studentdata"/>
@@ -30,8 +30,8 @@
 
     <persistence-unit name="Collection_Set">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-        <class>main.java.EmployeeSet</class>
-        <class>main.java.AddressSet</class>
+        <class>main.java.entity.EmployeeSet</class>
+        <class>main.java.entity.AddressSet</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/studentdata"/>
@@ -41,4 +41,19 @@
             <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
         </properties>
     </persistence-unit>
+
+    <persistence-unit name="Collection_Map">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>main.java.entity.EmployeeMap</class>
+        <class>main.java.entity.AddressMap</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/studentdata"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="SEVERE"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>

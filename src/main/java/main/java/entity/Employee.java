@@ -1,5 +1,7 @@
-package main.java;
+package main.java.entity;
 
+
+import main.java.entity.Address;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -7,18 +9,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
-public class EmployeeSet {
+public class Employee {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int e_id;
   private String e_name;
   @ElementCollection
-  private Set<AddressSet> addressSets = new HashSet<AddressSet>();
+  private List<Address> addressList = new ArrayList<Address>();
 
   public int getE_id() {
     return e_id;
@@ -36,11 +36,11 @@ public class EmployeeSet {
     this.e_name = e_name;
   }
 
-  public Set<AddressSet> getAddressSets() {
-    return addressSets;
+  public List<Address> getAddressList() {
+    return addressList;
   }
 
-  public void setAddressSets(Set<AddressSet> addressSets) {
-    this.addressSets = addressSets;
+  public void setAddressList(List<Address> addressList) {
+    this.addressList = addressList;
   }
 }
