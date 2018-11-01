@@ -964,288 +964,70 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="242" parent="6" name="employee"/>
-    <table id="243" parent="6" name="employee_addresslist"/>
-    <table id="244" parent="6" name="employeemap"/>
-    <table id="245" parent="6" name="employeemap_map"/>
-    <table id="246" parent="6" name="employeeset"/>
-    <table id="247" parent="6" name="employeeset_addresssets"/>
-    <table id="248" parent="6" name="library"/>
-    <table id="249" parent="6" name="library_one_to_many"/>
-    <table id="250" parent="6" name="sequence"/>
-    <table id="251" parent="6" name="student"/>
-    <table id="252" parent="6" name="student_one_to_many"/>
-    <table id="253" parent="6" name="student_one_to_many_library_one_to_many"/>
-    <column id="254" parent="242" name="E_ID">
+    <table id="242" parent="6" name="library"/>
+    <table id="243" parent="6" name="sequence"/>
+    <table id="244" parent="6" name="student"/>
+    <column id="245" parent="242" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="242" name="E_NAME">
+    <column id="246" parent="242" name="NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="256" parent="242" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>E_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="257" parent="243" name="E_CITY">
-      <Position>1</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="243" name="E_PIN_CODE">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="259" parent="243" name="E_STATE">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="260" parent="243" name="Employee_E_ID">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="261" parent="243" name="FK_Employee_ADDRESSLIST_Employee_E_ID">
-      <ColNames>Employee_E_ID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <foreign-key id="262" parent="243" name="FK_Employee_ADDRESSLIST_Employee_E_ID">
-      <ColNames>Employee_E_ID</ColNames>
-      <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>employee</RefTableName>
-      <RefColNames>E_ID</RefColNames>
-    </foreign-key>
-    <column id="263" parent="244" name="E_ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="264" parent="244" name="E_NAME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="265" parent="244" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>E_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="266" parent="245" name="MAP_KEY">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="267" parent="245" name="E_CITY">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="268" parent="245" name="E_PINCODE">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="269" parent="245" name="E_STATE">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="270" parent="245" name="EmployeeMap_E_ID">
-      <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="271" parent="245" name="FK_EmployeeMap_MAP_EmployeeMap_E_ID">
-      <ColNames>EmployeeMap_E_ID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <foreign-key id="272" parent="245" name="FK_EmployeeMap_MAP_EmployeeMap_E_ID">
-      <ColNames>EmployeeMap_E_ID</ColNames>
-      <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>employeemap</RefTableName>
-      <RefColNames>E_ID</RefColNames>
-    </foreign-key>
-    <column id="273" parent="246" name="E_ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="274" parent="246" name="E_NAME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="275" parent="246" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>E_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="276" parent="247" name="E_CITY">
-      <Position>1</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="277" parent="247" name="E_PIN_CODE">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="278" parent="247" name="E_STATE">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="279" parent="247" name="EmployeeSet_E_ID">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="280" parent="247" name="FK_EmployeeSet_ADDRESSSETS_EmployeeSet_E_ID">
-      <ColNames>EmployeeSet_E_ID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <foreign-key id="281" parent="247" name="FK_EmployeeSet_ADDRESSSETS_EmployeeSet_E_ID">
-      <ColNames>EmployeeSet_E_ID</ColNames>
-      <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>employeeset</RefTableName>
-      <RefColNames>E_ID</RefColNames>
-    </foreign-key>
-    <column id="282" parent="248" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="283" parent="248" name="BOOK_NAME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="284" parent="248" name="STUDENT_ID">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="285" parent="248" name="FK_LIBRARY_STUDENT_ID">
-      <ColNames>STUDENT_ID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="286" parent="248" name="PRIMARY">
+    <key id="247" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="287" parent="248" name="FK_LIBRARY_STUDENT_ID">
-      <ColNames>STUDENT_ID</ColNames>
-      <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>student</RefTableName>
-      <RefColNames>ID</RefColNames>
-    </foreign-key>
-    <column id="288" parent="249" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="289" parent="249" name="NAME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="290" parent="249" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="291" parent="250" name="SEQ_NAME">
+    <column id="248" parent="243" name="SEQ_NAME">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="250" name="SEQ_COUNT">
+    <column id="249" parent="243" name="SEQ_COUNT">
       <Position>2</Position>
       <DataType>decimal(38)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="293" parent="250" name="PRIMARY">
+    <key id="250" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SEQ_NAME</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="294" parent="251" name="ID">
+    <column id="251" parent="244" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="251" name="STUDENT_NAME">
+    <column id="252" parent="244" name="NAME">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="296" parent="251" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="297" parent="252" name="ID">
-      <Position>1</Position>
+    <column id="253" parent="244" name="LIBRARY_ID">
+      <Position>3</Position>
       <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="252" name="NAME">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="299" parent="252" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="300" parent="253" name="Student_ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="301" parent="253" name="book_issued_ID">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="302" parent="253" name="studentonetomany_library_one_to_manybook_issued_ID">
-      <ColNames>book_issued_ID</ColNames>
+    <index id="254" parent="244" name="FK_STUDENT_LIBRARY_ID">
+      <ColNames>LIBRARY_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="303" parent="253" name="PRIMARY">
+    <key id="255" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>Student_ID
-book_issued_ID</ColNames>
+      <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="304" parent="253" name="student_one_to_many_library_one_to_many_Student_ID">
-      <ColNames>Student_ID</ColNames>
+    <foreign-key id="256" parent="244" name="FK_STUDENT_LIBRARY_ID">
+      <ColNames>LIBRARY_ID</ColNames>
       <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>student_one_to_many</RefTableName>
-      <RefColNames>ID</RefColNames>
-    </foreign-key>
-    <foreign-key id="305" parent="253" name="studentonetomany_library_one_to_manybook_issued_ID">
-      <ColNames>book_issued_ID</ColNames>
-      <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>library_one_to_many</RefTableName>
+      <RefTableName>library</RefTableName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
   </database-model>
