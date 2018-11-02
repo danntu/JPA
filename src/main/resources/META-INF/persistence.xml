@@ -98,4 +98,18 @@
         </properties>
     </persistence-unit>
 
+    <persistence-unit name="many_to_many">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>main.java.entity.manytomany.Student</class>
+        <class>main.java.entity.manytomany.Library</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/studentdata"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="eclipselink.logging.level" value="SEVERE"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+        </properties>
+    </persistence-unit>
+
 </persistence>

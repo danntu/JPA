@@ -13,6 +13,7 @@
           <factory-entry name="NewPersistenceUnit" />
           <factory-entry name="StudentDetails" />
           <factory-entry name="book_issued" />
+          <factory-entry name="many_to_one" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>
@@ -34,5 +35,6 @@
     <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.47" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.2" level="project" />
   </component>
 </module>
