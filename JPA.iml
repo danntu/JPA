@@ -13,6 +13,8 @@
           <factory-entry name="NewPersistenceUnit" />
           <factory-entry name="StudentDetails" />
           <factory-entry name="book_issued" />
+          <factory-entry name="cascade_persist" />
+          <factory-entry name="many_to_many" />
           <factory-entry name="many_to_one" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
