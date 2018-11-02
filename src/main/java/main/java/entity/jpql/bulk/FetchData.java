@@ -22,6 +22,10 @@ public class FetchData {
                     + " " + studentEntity.getAge()
     ));
 
+    Query queryUpdate = entityManager.createQuery(
+            "update StudentEntity set age = 25 where id>103");
+    queryUpdate.executeUpdate();
+
     entityManager.getTransaction().commit();
     entityManager.close();
     entityManagerFactory.close();
