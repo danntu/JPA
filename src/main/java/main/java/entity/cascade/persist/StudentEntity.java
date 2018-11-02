@@ -1,4 +1,4 @@
-package main.java.entity.cascade;
+package main.java.entity.cascade.persist;
 
 import lombok.Getter;
 import lombok.Setter;

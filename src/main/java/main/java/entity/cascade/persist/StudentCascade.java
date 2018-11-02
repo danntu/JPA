@@ -1,4 +1,4 @@
-package main.java.entity.cascade;
+package main.java.entity.cascade.persist;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
