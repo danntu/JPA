@@ -16,6 +16,7 @@
           <factory-entry name="cascade_persist" />
           <factory-entry name="cascade_remove" />
           <factory-entry name="jpql_dynamic" />
+          <factory-entry name="jpql_static" />
           <factory-entry name="many_to_many" />
           <factory-entry name="many_to_one" />
         </datasource-mapping>
