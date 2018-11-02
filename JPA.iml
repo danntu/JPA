@@ -15,6 +15,7 @@
           <factory-entry name="book_issued" />
           <factory-entry name="cascade_persist" />
           <factory-entry name="cascade_remove" />
+          <factory-entry name="jpql_dynamic" />
           <factory-entry name="many_to_many" />
           <factory-entry name="many_to_one" />
         </datasource-mapping>
@@ -22,7 +23,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">

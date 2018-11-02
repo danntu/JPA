@@ -965,60 +965,23 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="242" parent="6" name="student"/>
-    <table id="243" parent="6" name="subject"/>
-    <column id="244" parent="242" name="ID">
+    <column id="243" parent="242" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="242" name="AGE">
+    <column id="244" parent="242" name="AGE">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="242" name="NAME">
+    <column id="245" parent="242" name="NAME">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="242" name="SUBJECT_ID">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="248" parent="242" name="FK_student_SUBJECT_ID">
-      <ColNames>SUBJECT_ID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="249" parent="242" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="250" parent="242" name="FK_student_SUBJECT_ID">
-      <ColNames>SUBJECT_ID</ColNames>
-      <RefSchemaName>studentdata</RefSchemaName>
-      <RefTableName>subject</RefTableName>
-      <RefColNames>ID</RefColNames>
-    </foreign-key>
-    <column id="251" parent="243" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="252" parent="243" name="MARKS">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="253" parent="243" name="NAME">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="254" parent="243" name="PRIMARY">
+    <key id="246" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
