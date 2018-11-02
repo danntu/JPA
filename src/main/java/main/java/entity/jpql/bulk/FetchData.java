@@ -26,6 +26,11 @@ public class FetchData {
             "update StudentEntity set age = 25 where id>103");
     queryUpdate.executeUpdate();
 
+    Query queryDelete = entityManager.createQuery(
+            "delete from StudentEntity where id = 102"
+    );
+    queryDelete.executeUpdate();
+
     entityManager.getTransaction().commit();
     entityManager.close();
     entityManagerFactory.close();
