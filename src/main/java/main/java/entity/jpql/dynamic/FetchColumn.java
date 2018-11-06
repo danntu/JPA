@@ -13,7 +13,7 @@ public class FetchColumn {
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     entityManager.getTransaction().begin();
 
-    Query query = entityManager.createQuery("select s.name from StudentEntity s");
+    Query query = entityManager.createQuery("select s.name from StudentEntity2 s");
     List<String> list = query.getResultList();
     list.forEach(s -> System.out.println(s));
 

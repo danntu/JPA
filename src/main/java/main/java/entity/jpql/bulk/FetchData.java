@@ -13,7 +13,7 @@ public class FetchData {
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     entityManager.getTransaction().begin();
 
-    Query query = entityManager.createQuery("select s from StudentEntity s");
+    Query query = entityManager.createQuery("select s from StudentEntity2 s");
     List<StudentEntity> list = (List<StudentEntity>) query.getResultList();
 
     list.forEach(studentEntity -> System.out.println(
@@ -23,11 +23,11 @@ public class FetchData {
     ));
 
     Query queryUpdate = entityManager.createQuery(
-            "update StudentEntity set age = 25 where id>103");
+            "update StudentEntity2 set age = 25 where id>103");
     queryUpdate.executeUpdate();
 
     Query queryDelete = entityManager.createQuery(
-            "delete from StudentEntity where id = 102"
+            "delete from StudentEntity2 where id = 102"
     );
     queryDelete.executeUpdate();
 
