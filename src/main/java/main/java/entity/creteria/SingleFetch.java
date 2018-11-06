@@ -30,10 +30,9 @@ public class SingleFetch {
     System.out.println("s_id");
 
 
-    for (StudentEntity2 s : list) {
-      System.out.println(s.getId());
-
-    }
+    list.forEach(studentEntity2 -> {
+      System.out.println(studentEntity2.getId());
+    });
 
   }
 }
