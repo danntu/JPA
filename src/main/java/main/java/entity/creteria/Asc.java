@@ -33,6 +33,20 @@ public class Asc {
       System.out.print(studentEntity2.getName() + " ");
       System.out.println(studentEntity2.getAge());
     });
+
+    System.out.println("Sorting in descending order");
+    criteriaQuery.orderBy(criteriaBuilder.desc(studentEntity2Root.get("age")));
+
+    select = criteriaQuery.select(studentEntity2Root);
+
+    typedQuery = entityManager.createQuery(select);
+    list = typedQuery.getResultList();
+    list.forEach(studentEntity2 -> {
+      System.out.print(studentEntity2.getId() + " ");
+      System.out.print(studentEntity2.getName() + " ");
+      System.out.println(studentEntity2.getAge());
+    });
+
     entityManager.close();
     entityManagerFactory.close();
   }
