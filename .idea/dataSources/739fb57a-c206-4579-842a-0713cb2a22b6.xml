@@ -964,86 +964,78 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="242" parent="6" name="employee_details"/>
-    <table id="243" parent="6" name="student"/>
-    <table id="244" parent="6" name="studententity2"/>
+    <table id="242" parent="6" name="activeemployee"/>
+    <table id="243" parent="6" name="employee_details"/>
+    <table id="244" parent="6" name="retiredemployee"/>
     <column id="245" parent="242" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="242" name="DTYPE">
+    <column id="246" parent="242" name="EXPERIENCE">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="242" name="SALARY">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="248" parent="242" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="249" parent="242" name="FK_ACTIVEEMPLOYEE_ID">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>studentdata</RefSchemaName>
+      <RefTableName>employee_details</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="250" parent="243" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="251" parent="243" name="DTYPE">
       <Position>2</Position>
       <DataType>varchar(31)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="242" name="NAME">
+    <column id="252" parent="243" name="NAME">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="242" name="EXPERIENCE">
-      <Position>4</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="249" parent="242" name="SALARY">
-      <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="250" parent="242" name="PENSION">
-      <Position>6</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="251" parent="242" name="PRIMARY">
+    <key id="253" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="252" parent="243" name="ID">
+    <column id="254" parent="244" name="ID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="243" name="AGE">
+    <column id="255" parent="244" name="PENSION">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="243" name="NAME">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="255" parent="243" name="PRIMARY">
+    <key id="256" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="256" parent="244" name="ID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="257" parent="244" name="AGE">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="244" name="NAME">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="259" parent="244" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
+    <foreign-key id="257" parent="244" name="FK_RETIREDEMPLOYEE_ID">
       <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
+      <RefSchemaName>studentdata</RefSchemaName>
+      <RefTableName>employee_details</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
