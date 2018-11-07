@@ -44,7 +44,9 @@ public class Between {
 
     CriteriaQuery<Object[]> criteriaQuery = criteriaBuilder.createQuery(Object[].class);
     Root<StudentEntity2> entity2Root = criteriaQuery.from(StudentEntity2.class);
-    criteriaQuery.multiselect(entity2Root.get("age"), criteriaBuilder.count(entity2Root)).groupBy(entity2Root.get("age"));
+    //criteriaQuery.multiselect(entity2Root.get("age"), criteriaBuilder.count(entity2Root)).groupBy(entity2Root.get("age"));
+    criteriaQuery.multiselect(entity2Root.get("age"), criteriaBuilder.count(entity2Root)).groupBy(entity2Root.get("age"))
+            .having(criteriaBuilder.ge(entity2Root.get("age"), 20));
 
     System.out.print("s_age");
     System.out.println("\t Count");
