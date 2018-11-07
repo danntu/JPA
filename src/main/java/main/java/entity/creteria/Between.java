@@ -24,7 +24,8 @@ public class Between {
     Root<StudentEntity2> studentEntity2Root = abstractQuery.from(StudentEntity2.class);
 
     //abstractQuery.where(criteriaBuilder.between(studentEntity2Root.get("age"), 20, 27));
-    abstractQuery.where(criteriaBuilder.like(studentEntity2Root.get("name"), "D%"));
+    //abstractQuery.where(criteriaBuilder.like(studentEntity2Root.get("name"), "D%"));
+    abstractQuery.where(criteriaBuilder.in(studentEntity2Root.get("age")).value(18).value(23));
     CriteriaQuery<StudentEntity2> select = ((CriteriaQuery<StudentEntity2>) abstractQuery).select(studentEntity2Root);
     TypedQuery<StudentEntity2> typedQuery = entityManager.createQuery(select);
     List<StudentEntity2> list = typedQuery.getResultList();
