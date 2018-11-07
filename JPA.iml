@@ -17,6 +17,7 @@
           <factory-entry name="cascade_remove" />
           <factory-entry name="creteria" />
           <factory-entry name="creteria_test" />
+          <factory-entry name="employee_details" />
           <factory-entry name="jpql_advanced" />
           <factory-entry name="jpql_bulk" />
           <factory-entry name="jpql_dynamic" />
